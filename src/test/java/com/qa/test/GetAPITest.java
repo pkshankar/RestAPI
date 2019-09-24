@@ -99,21 +99,29 @@ public class GetAPITest extends TestBase {
 		}
 
 	}
-	
+
 	@Test
-	public void parseJson() throws ClientProtocolException, IOException {
-		
+	public void getDataJson() throws ClientProtocolException, IOException {
+
 		CloseableHttpClient closeableHttpClient = HttpClients.createDefault();
 		HttpGet httpGet = new HttpGet(uri);
 		CloseableHttpResponse closeableHttpResponse = closeableHttpClient.execute(httpGet);
 		JSONObject jsonResponse = new JSONObject(EntityUtils.toString(closeableHttpResponse.getEntity(), "UTF-8"));
-		TestUtil.getValueByJPath(jsonResponse, "data");
-		//System.out.println(str.length);
-//		for(String s: str) {
-//			
-//			System.out.println(s);
-//		}
-//		
+		String jObj = TestUtil.getDataJsonObject(jsonResponse, "per_page");
+		System.out.println(jObj);
+		String datafromJsonArray = TestUtil.getDataJsonArray(jsonResponse, "data", "email", 1);
+		System.out.println(datafromJsonArray);
+
+	}
+
+	@Test
+	public void iterateThroughJsonArray() throws ClientProtocolException, IOException {
+
+		CloseableHttpClient closeableHttpClient = HttpClients.createDefault();
+		HttpGet httpGet = new HttpGet(uri);
+		CloseableHttpResponse closeableHttpResponse = closeableHttpClient.execute(httpGet);
+		JSONObject jsonResponse = new JSONObject(EntityUtils.toString(closeableHttpResponse.getEntity(), "UTF-8"));
+		TestUtil.iterateJsonArray(jsonResponse);
 	}
 
 }

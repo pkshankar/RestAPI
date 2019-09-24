@@ -1,46 +1,36 @@
 package com.qa.util;
 
+import java.util.Iterator;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
 
 public class TestUtil {
 
-	public static String getValueByJPath(JSONObject responsejson, String jpath) {
-		Object obj = responsejson;
-	System.out.println("hello " +responsejson.get("data"));
-		
-		// "per_page": 6
-		
-//		for(String s : jpath.split("/")) {
-//			
-//			if(s.contains("["))
-//				System.out.println("ok");
-//			else
-//				System.out.println("not ok");
-//		}
+	public static String getDataJsonObject(JSONObject responseJson, String element) {
+
+		return responseJson.get(element).toString();
+	}
 	
-		for(String s : jpath.split("/")) {
+	public static String getDataJsonArray(JSONObject responseJson, String arrName, String attribute, int jsonArrayIndex) {
+		
+		return responseJson.getJSONArray(arrName).getJSONObject(jsonArrayIndex).get(attribute).toString();
+
+		
+	}
+	
+	public static void iterateJsonArray(JSONObject responseJson) {
+		
+		JSONArray jArray = responseJson.getJSONArray("data");
+		
+		
+		Iterator<Object> itr = jArray.iterator();
+		while(itr.hasNext()) {
 			
-			System.out.println(((JSONObject)obj).get(s));
+			System.out.println(itr.next());
 		}
-		for (String s : jpath.split("/"))
-			if (!s.isEmpty())
-				if (!(s.contains("[") || s.contains("]"))) {
-					
-					System.out.println("CONTAINS");
-					obj = ((JSONObject) obj).get(s);
-					
-				}
-					
-				else if (s.contains("[") || s.contains("]")) {
-					System.out.println("NOT CONTAINS");
-					obj = ((JSONArray) ((JSONObject) obj).get(s.split("\\[")[0]))
-							.get(Integer.parseInt(s.split("\\[")[1].replace("]", "")));
-					
-				}
-		return obj.toString();
+		
+		
 	}
 
-	}
-
-
+}
