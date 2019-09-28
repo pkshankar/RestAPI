@@ -62,6 +62,8 @@ public class PostAPTTest extends TestBase {
 		JSONObject jsonObj = new JSONObject(jsonResponseString);
 		System.out.println("JSON RESPONSE " +jsonObj);
 		
+	//	mapper.readValues(jsonObj, TestData.class);
+		
 
 	}
 

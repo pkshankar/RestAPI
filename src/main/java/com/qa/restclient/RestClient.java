@@ -25,7 +25,7 @@ public class RestClient {
 
 	}
 
-	/* AUTOMATE A REST GET CALL WITHOUT HEADERS */
+	/* AUTOMATE A REST GET CALL WITH HEADERS */
 
 	public CloseableHttpResponse get(String uri, HashMap<String, String> requestHeaderMap)
 			throws ClientProtocolException, IOException {
