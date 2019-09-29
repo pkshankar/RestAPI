@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-09-24T08:18:42Z" name="Default suite" finished-at="2019-09-24T08:18:45Z" duration-ms="2375">
+  <suite started-at="2019-09-29T10:42:38Z" name="Default suite" finished-at="2019-09-29T10:42:40Z" duration-ms="2773">
     <groups>
     </groups>
-    <test started-at="2019-09-24T08:18:42Z" name="Default test" finished-at="2019-09-24T08:18:45Z" duration-ms="2375">
-      <class name="com.qa.test.PostAPTTest">
-        <test-method signature="postTestWithHeaders()[pri:0, instance:com.qa.test.PostAPTTest@534df152]" started-at="2019-09-24T13:48:42Z" name="postTestWithHeaders" finished-at="2019-09-24T13:48:45Z" duration-ms="2359" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- postTestWithHeaders -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.qa.test.PostAPTTest@534df152]" started-at="2019-09-24T13:48:42Z" name="setUp" finished-at="2019-09-24T13:48:42Z" duration-ms="0" status="PASS">
+    <test started-at="2019-09-29T10:42:38Z" name="Default test" finished-at="2019-09-29T10:42:40Z" duration-ms="2773">
+      <class name="com.qa.test.DeleteAPITest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.qa.test.DeleteAPITest@75f9eccc]" started-at="2019-09-29T16:12:38Z" name="setUp" finished-at="2019-09-29T16:12:38Z" duration-ms="7" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-      </class> <!-- com.qa.test.PostAPTTest -->
+        <test-method signature="deleteTest()[pri:0, instance:com.qa.test.DeleteAPITest@75f9eccc]" started-at="2019-09-29T16:12:38Z" name="deleteTest" finished-at="2019-09-29T16:12:40Z" duration-ms="2746" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteTest -->
+      </class> <!-- com.qa.test.DeleteAPITest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

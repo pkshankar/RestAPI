@@ -16,7 +16,7 @@ public class TestBase {
 		prop = new Properties();
 		try {
 			FileInputStream fis = new FileInputStream(
-					"C:\\Users\\pkshank\\eclipse-workspace\\RestAPI\\src\\main\\java\\com\\qa\\config\\config.properties");
+					"C:\\Users\\pkshank\\eclipse-workspace\\HTTPClient_RestAPI\\src\\main\\java\\com\\qa\\config\\config.properties");
 			try {
 				prop.load(fis);
 			} catch (IOException e) {

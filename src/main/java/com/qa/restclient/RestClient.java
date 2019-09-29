@@ -7,8 +7,10 @@ import java.util.Map;
 
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpDelete;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.methods.HttpPut;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
@@ -41,8 +43,7 @@ public class RestClient {
 
 	}
 
-	public CloseableHttpResponse post(String uri, String entityString)
-			throws ClientProtocolException, IOException {
+	public CloseableHttpResponse post(String uri, String entityString) throws ClientProtocolException, IOException {
 
 		CloseableHttpClient closeableHttpClient = HttpClients.createDefault();
 		HttpPost httpPost = new HttpPost(uri);
@@ -54,6 +55,26 @@ public class RestClient {
 		httpPost.setEntity(new StringEntity(entityString));
 
 		return closeableHttpClient.execute(httpPost);
+	}
+
+	// AUTOMATE PUT CALL
+
+	public CloseableHttpResponse put(String url, String entityString) throws ClientProtocolException, IOException {
+
+		CloseableHttpClient closeableHttpClient = HttpClients.createDefault();
+		HttpPut httpPut = new HttpPut(url);
+
+		// SET THE ENTITY
+		httpPut.setEntity(new StringEntity(entityString));
+		return closeableHttpClient.execute(httpPut);
+
+	}
+
+	public CloseableHttpResponse delete(String url) throws ClientProtocolException, IOException {
+
+		CloseableHttpClient closeableHttpClient = HttpClients.createDefault();
+		HttpDelete httpDelete = new HttpDelete(url);
+		return closeableHttpClient.execute(httpDelete);
 	}
 
 }
