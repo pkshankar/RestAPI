@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-10-13T09:51:09Z" name="Default suite" finished-at="2019-10-13T09:51:10Z" duration-ms="1208">
+  <suite started-at="2019-12-11T01:40:20Z" name="Default suite" finished-at="2019-12-11T01:40:22Z" duration-ms="1694">
     <groups>
     </groups>
-    <test started-at="2019-10-13T09:51:09Z" name="Default test" finished-at="2019-10-13T09:51:10Z" duration-ms="1208">
-      <class name="com.qa.test.GoRestPost">
-        <test-method signature="postTestGoRest()[pri:0, instance:com.qa.test.GoRestPost@36f0f1be]" started-at="2019-10-13T15:21:09Z" name="postTestGoRest" finished-at="2019-10-13T15:21:10Z" duration-ms="1181" status="PASS">
+    <test started-at="2019-12-11T01:40:20Z" name="Default test" finished-at="2019-12-11T01:40:22Z" duration-ms="1694">
+      <class name="com.qa.test.AuthHandle">
+        <test-method signature="handleBasicAuth()[pri:0, instance:com.qa.test.AuthHandle@36f0f1be]" started-at="2019-12-11T07:10:20Z" name="handleBasicAuth" finished-at="2019-12-11T07:10:22Z" duration-ms="1659" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- postTestGoRest -->
-      </class> <!-- com.qa.test.GoRestPost -->
+        </test-method> <!-- handleBasicAuth -->
+      </class> <!-- com.qa.test.AuthHandle -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
